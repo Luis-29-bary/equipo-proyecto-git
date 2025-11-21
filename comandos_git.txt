@@ -1,1 +1,12 @@
-soy manuel y esta es mi apunte de comandos
+cd "ruta"inicializar git
+MkDir, implementar para crear una carpeta
+GIT, todos los comandos
+GIT init, indica que el repositorio va a ser utilizado
+GIT add,agrega archivos en dirección
+git config -- global user.name
+git congig -- global user.email
+git commit -m "primer estado"
+git status
+git log, muestra todos los commits
+git log -oneline, muestra el texto del commit es decir una linea
+git Branch, crea una rama
