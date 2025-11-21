@@ -1,0 +1,37 @@
+/bin/bash
+
+# Nombre de la rama de desarrollo (Bash)
+DEV_BRANCH="develop"
+
+echo "----------------------------------------"
+echo "  🚀 Script para aportar a la rama $DEV_BRANCH"
+echo "----------------------------------------"
+
+if [ ! -d .git ]; then
+    echo "❌ Este directorio no es un repositorio Git."
+    exit 1
+fi
+
+
+echo "➡ Cambiando a la rama $DEV_BRANCH..."
+git checkout $DEV_BRANCH
+
+
+echo "🔄 Actualizando rama..."
+git pull origin $DEV_BRANCH
+
+
+echo "📌 Agregando archivos al commit..."
+git add .
+
+
+read -p "📝 Escribe el mensaje del commit: " COMMIT_MSG
+
+
+git commit -m "$COMMIT_MSG"
+
+
+echo "⬆ Subiendo cambios al servidor..."
+git push origin $DEV_BRANCH
+
+echo "✔ Listo. Cambios enviados a la rama $DEV_BRANCH."
